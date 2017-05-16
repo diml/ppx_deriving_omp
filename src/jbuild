@@ -1,0 +1,9 @@
+(jbuild_version 1)
+
+(library
+ ((name        ppx_deriving_omp)
+  (public_name ppx_deriving_omp)
+  (kind        ppx_rewriter)
+  (libraries   (ocaml-migrate-parsetree
+                ppx_deriving
+                ppx_derivers))))

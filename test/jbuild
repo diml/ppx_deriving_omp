@@ -1,0 +1,9 @@
+(jbuild_version 1)
+
+(executable
+ ((name test)
+  (preprocess (pps (ppx_deriving_omp ppx_deriving.show)))))
+
+(alias
+ ((name runtest)
+  (deps (test.exe))))
