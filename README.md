@@ -1,9 +1,10 @@
 Ppx_deriving_omp
 ----------------
 
-This is a temporary project allowing one to use
-[ppx_deriving][ppx_deriving] 4.1 with [jbuilder][jbuilder]. The next
-major version of ppx_deriving will work with jbuilder out of the box.
+This is a temporary project allowing one to use [ppx_deriving][pd] 4.X
+with [ocaml-migrate-parsetree driver][omp] and in particular
+[jbuilder][jb]. The next major version of ppx_deriving will work with
+jbuilder out of the box.
 
 To use simply add `ppx_deriving_omp` to the list of preprocessors in
 your jbuild file:
@@ -18,6 +19,6 @@ your jbuild file:
 In order for this to work, the `.cma` and `.cmxa` for the various
 ppx_deriving plugins you are using must be linked with `-linkall`.
 
-[ppx_deriving]: https://github.com/whitequark/ppx_deriving
-[jbuilder]:     https://github.com/janestreet/jbuilder
-
+[pd]:  https://github.com/whitequark/ppx_deriving
+[omp]: https://github.com/let-def/ocaml-migrate-parsetree
+[jb]:  https://github.com/janestreet/jbuilder

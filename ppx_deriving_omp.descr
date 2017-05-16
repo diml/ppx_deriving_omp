@@ -1,0 +1,5 @@
+Bridge to use ppx_deriving with ocaml-migrate-parsetree driver and jbuilder.
+
+Ppx_deriving_omp allows one to use ppx_deriving plugins based on
+ppx_deriving 4.X with jbuilder or the ocamlbuild plugin for
+ocaml-migrate-parsetree.
