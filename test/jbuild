@@ -2,8 +2,15 @@
 
 (executable
  ((name test)
-  (preprocess (pps (ppx_deriving_omp ppx_deriving.show)))))
+  (modules (test))
+  (preprocess (pps (ppx_deriving_omp ppx_deriving_foo)))))
+
+(library
+ ((name ppx_deriving_foo)
+  (modules (ppx_deriving_foo))
+  (libraries (ppx_deriving compiler-libs.common))
+  (kind ppx_deriver)))
 
 (alias
  ((name runtest)
-  (deps (test.exe))))
+  (action (system "./${exe:test.exe} | grep -q 'Hello, world!'"))))

@@ -1,3 +1,1 @@
-type t = A [@@deriving show]
-
-let () = print_endline ([%show: t] A)
+let () = print_endline [%foo: _]
